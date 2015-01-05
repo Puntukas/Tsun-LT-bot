@@ -55,7 +55,7 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Tsun-LT bot,
         language: "english",
-        chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/lang/en.json",
+        chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
         maximumAfk: 120,
         afkRemoval: true,
         maximumDc: 60,
@@ -99,12 +99,12 @@
         songstats: true,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/blacklists/ExampleOPlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/basicBot.js', extend);
+    $.getScript('https://rawgit.com/Puntukas/Tsun-LT-bot/master/basicBot.js', extend);
 
 }).call(this);
