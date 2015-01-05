@@ -123,7 +123,7 @@
         var json_sett = null;
         var roominfo = document.getElementById("room-info");
         info = roominfo.textContent;
-        var ref_bot = "@basicBot=";
+        var ref_bot = "@Tsun-bot=";
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
             var link = info.substring(ind_ref + ref_bot.length, info.length);
@@ -180,7 +180,7 @@
     var basicBot = {
         version: "BETA",
         status: false,
-        name: "Tsun-LT bot",
+        name: "Tsun-bot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -190,7 +190,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "Tsun-LT bot",
+            botName: "Tsun-bot",
             language: "english",
             chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
             maximumAfk: 120,
@@ -1251,7 +1251,7 @@
                 return perm >= minPerm;
 
             },
-            /**
+            
              command: {
                         command: 'cmd',
                         rank: 'user/bouncer/mod/manager',
@@ -1264,7 +1264,7 @@
                                 }
                         }
                 },
-             **/
+            
 
             activeCommand: {
                 command: 'active',
@@ -2218,7 +2218,7 @@
                         var permFrom = basicBot.userUtilities.getPermission(chat.uid);
                         var permUser = basicBot.userUtilities.getPermission(user.id);
                         if (permFrom > permUser) {
-                            /*
+                            
                              basicBot.room.mutedUsers.push(user.id);
                              if (time === null) API.sendChat(subChat(basicBot.chat.mutednotime, {name: chat.un, username: name}));
                              else {
@@ -2241,7 +2241,7 @@
                              }
                              }, time * 60 * 1000, user.id);
                              }
-                             */
+                             
                             if (time > 45) {
                                 API.sendChat(subChat(basicBot.chat.mutedmaxtime, {name: chat.un, time: "45"}));
                                 API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
@@ -2698,7 +2698,7 @@
                     else {
                         var msg = chat.message;
                         var permFrom = basicBot.userUtilities.getPermission(chat.uid);
-                        /**
+                        
                          if (msg.indexOf('@') === -1 && msg.indexOf('all') !== -1) {
                             if (permFrom > 2) {
                                 basicBot.room.mutedUsers = [];
@@ -2706,7 +2706,7 @@
                             }
                             else return API.sendChat(subChat(basicBot.chat.unmuteeveryonerank, {name: chat.un}));
                         }
-                         **/
+                        
                         var from = chat.un;
                         var name = msg.substr(cmd.length + 2);
 
@@ -2716,7 +2716,7 @@
 
                         var permUser = basicBot.userUtilities.getPermission(user.id);
                         if (permFrom > permUser) {
-                            /*
+                            
                              var muted = basicBot.room.mutedUsers;
                              var wasMuted = false;
                              var indexMuted = -1;
@@ -2730,7 +2730,7 @@
                              if (!wasMuted) return API.sendChat(subChat(basicBot.chat.notmuted, {name: chat.un}));
                              basicBot.room.mutedUsers.splice(indexMuted);
                              API.sendChat(subChat(basicBot.chat.unmuted, {name: chat.un, username: name}));
-                             */
+                             
                             try {
                                 API.moderateUnmuteUser(user.id);
                                 API.sendChat(subChat(basicBot.chat.unmuted, {name: chat.un, username: name}));
