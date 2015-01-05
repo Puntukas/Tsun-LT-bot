@@ -190,7 +190,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "Tsun-LT bot",
             language: "english",
             chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
             maximumAfk: 120,
