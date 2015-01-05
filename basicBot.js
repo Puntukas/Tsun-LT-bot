@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -182,9 +182,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
+        chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -192,7 +192,7 @@
         settings: {
             botName: "basicBot",
             language: "english",
-            chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
+            chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/lang/en.json",
             maximumAfk: 120,
             afkRemoval: true,
             maximumDc: 60,
@@ -236,8 +236,8 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/Puntukas/Tsun-LT-bot/blob/master/blacklists/ExampleOPlist.json"
             }
         },
         room: {
@@ -2381,7 +2381,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: 'lottery',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
