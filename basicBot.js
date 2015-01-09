@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Puntukas/Tsun-LT-bot/master//lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -183,7 +183,7 @@
         name: "Tsun-bot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
+        cmdLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/commands.md",
         chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
