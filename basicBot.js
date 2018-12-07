@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/langIndex.json", function (json) {
+        $.get("https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -182,9 +182,9 @@
         status: false,
         name: "Tsun-bot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/basicBot.js",
-        cmdLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/commands.md",
-        chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
+        scriptLink: "https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/basicBot.js",
+        cmdLink: "https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/commands.md",
+        chatLink: "https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -192,7 +192,7 @@
         settings: {
             botName: "Tsun-bot",
             language: "english",
-            chatLink: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/lang/en.json",
+            chatLink: "https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/lang/en.json",
             maximumAfk: 120,
             afkRemoval: true,
             maximumDc: 60,
@@ -236,8 +236,8 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Puntukas/Tsun-LT-bot/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/blacklists/ExampleNSFWlist.json",
+                OP: "https://cdn.jsdelivr.net/gh/Puntukas/Tsun-LT-bot/blacklists/ExampleOPlist.json"
             }
         },
         room: {
